@@ -1,0 +1,118 @@
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
+* {
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #d51c1c;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid red;
+  background-color: red;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s all;
+  color: #fff;
+}
+
+button:hover {
+  background-color: transparent;
+  color: red;
+}
+
+.todo {
+  width: 400px;
+  border-radius: 4px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px #fff;
+}
+
+.todo > .list {
+  padding: 30px 15px;
+}
+
+.todo > button.add_button {
+  width: 130px;
+}
+
+
+input[type="checkbox"] { display: none; }
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px 'Open Sans', Arial, sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin-top: 2px;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+  font-style: italic;
+  color: #777676;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0;word-wrap: anywhere;  }
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fc0303;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.btns { text-align: center; }
+.boxes {
+  padding: 0px 0px 16px 0px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .todo {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    margin: 0;
+  }
+  .btns {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  body {
+    background-color: #fff;
+  }
+}
